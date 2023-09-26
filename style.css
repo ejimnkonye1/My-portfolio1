@@ -2188,7 +2188,9 @@ header .circle {
   .contact:before {
     background-size: 200%;
   }
-
+ul li a{
+  text-decoration: none !important;
+}
   .contact-form .row {
     grid-column-gap: 0.3rem;
   }
