@@ -92,4 +92,17 @@ function animateSkills() {
       nav.classList.toggle("open");
     });
   });
-  
+  const numbers = document.querySelectorAll('.number'); // Select all elements with class 'number'
+
+  // Function to update data-num attribute based on the desired value
+  function updateDataNumValue(element, newValue) {
+    element.setAttribute('data-num', newValue);
+    element.textContent = newValue;
+  }
+
+  // Example usage: Update the data-num attribute for the 'number' elements
+  // Replace '7' with the desired value for each element
+  updateDataNumValue(numbers[0], 10); // Update the first element to '10'
+  updateDataNumValue(numbers[1], 8);  // Update the second element to '8'
+  updateDataNumValue(numbers[2], 20); // Update the third element to '20'
+  updateDataNumValue(numbers[3], 4);  // Update the fourth element to '4'
