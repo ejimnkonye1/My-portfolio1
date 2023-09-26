@@ -84,3 +84,12 @@ function animateSkills() {
       links.classList.toggle("active");
     });
   });
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.querySelector(".menu-toggler");
+    const nav = document.querySelector("nav");
+  
+    menuButton.addEventListener("click", function () {
+      nav.classList.toggle("open");
+    });
+  });
+  
