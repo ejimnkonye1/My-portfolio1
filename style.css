@@ -28,8 +28,21 @@ button,
 input,
 textarea {
   font-family: "Poppins", sans-serif;
+  overflow: none;
+}
+.logo {
+  width: 500px; /* Adjust the size of the circle */
+  height: 50px; 
+  border-radius: 50%; 
+  overflow: hidden; /* Ensures the image stays within the circular shape */
 }
 
+.logo img {
+  width: 100%; /* Makes sure the image fills the circle */
+ 
+  height: auto;
+  display: block; 
+}
 a {
   text-decoration: none;
 }
@@ -285,8 +298,8 @@ nav .container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 2.7rem;
-  height: 3rem;
+  width: 1.7rem;
+  height: 2rem;
   z-index: 100;
   position: relative;
   align-items: center;
@@ -319,7 +332,21 @@ nav .container {
 .menu-toggler .navbar-toggler-icon {
   display: none;
 }
-
+.menubar{
+    
+  display: none;
+  position: relative;
+  top: 30%;
+  margin-bottom: 5px;
+  transform: translateX(-50%);
+}
+.bar{
+  width: 20px;
+  height: 3px;
+  /* background-color: rgb(137, 130, 130); */
+  background-color: #fff;
+  margin-bottom: 3px;
+}
 /* Media query for screens smaller than 768px where the bar is shown */
 @media (max-width: 768px) {
   .menu-toggler .navbar-toggler-icon {
@@ -328,8 +355,8 @@ nav .container {
 }
 
 .hamburger-menu {
-  width: 2.7rem;
-  height: 3rem;
+  width: 1.7rem;
+  height: 1rem;
   z-index: 100;
   position: relative;
   display: none;
@@ -339,7 +366,7 @@ nav .container {
 
 .hamburger-menu .bar {
   position: relative;
-  width: 2.1rem;
+  width: 1.1rem;
   height: 3px;
   border-radius: 3px;
   background-color: var(--dark-one);
@@ -563,6 +590,7 @@ header .circle {
   position: relative;
   width: 100%;
   background-color: var(--light-two);
+  
 }
 
 .background-bg {
@@ -582,6 +610,10 @@ header .circle {
 .portfolio .title:after {
   background-color: var(--light-one);
 }
+.hidden {
+  display: none;
+}
+
 
 .filter {
   width: 100%;
@@ -650,12 +682,17 @@ header .circle {
 .grid {
   width: 100%;
   margin: 1.5rem 0;
+  
+
+  
+  justify-content: center; /* Center items horizontally */
+
 }
 
 .grid-item {
-  width: 33.33%;
+ 
   padding: 1rem 1.2rem;
-  display: flex;
+  
   justify-content: center;
 }
 
@@ -1269,7 +1306,7 @@ header .circle {
 
 .footer .grid-4 {
   display: grid;
-  grid-template-columns: 3.5fr 2fr 2fr 3fr;
+  grid-template-columns: 3fr 2fr 2fr ;
 }
 
 .grid-4-col {
@@ -1612,6 +1649,7 @@ header .circle {
 
   .grid-item {
     padding: 0.8rem;
+    justify-content: center;
   }
 
   .gallery-image {
@@ -2249,6 +2287,19 @@ header .circle {
     font-size: 0.8rem;
     padding: 0.8rem 1.4rem;
     margin: 0.25rem 0;
+  }
+  .grid-item {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .grid{
+display: grid;
+
+  }
+  .grid-item{
+
   }
 }
 

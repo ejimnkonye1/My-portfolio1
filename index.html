@@ -41,17 +41,18 @@
 
       <nav>
         <div class="container">
-          <div class="logo">
-            <!-- <img src="./img/logo.png" alt="" /> -->
+          <div class="logos">
+            
           </div>
       
-          <button class="menu-toggler" aria-label="Toggle menu">
+          <div class="menu-toggler" aria-label="Toggle menu">
             <span class="navbar-toggler-icon"></span>
       <span class="navbar-toggler-icon"></span>
       <span class="navbar-toggler-icon"></span>
            
             
-          </button>
+          </div> 
+          
       
           <div class="links">
             <ul>
@@ -99,9 +100,9 @@
             />
             <img src="./img/ejim-PhotoRoom.png-PhotoRoom.png" height="400"  class="img-element z-index" alt=""  data-aos="zoom-out" data-aos-duration="1000" />
           </div>
-        </div>
+        </div> 
       </div>
-    </header>
+    </header> 
 
     <section class="services section" id="services"  data-aos="fade-up" data-aos-duration="1000">
       <div class="container">
@@ -126,7 +127,7 @@
                 <p class="text">
                   Crafting beautiful and intuitive user interfaces that captivate your audience and elevate your brand.
                 </p>
-                <!-- <a href="#" class="btn small">Read more</a> -->
+                
               </div>
             </div>
           </div>
@@ -139,7 +140,7 @@
                 <p class="text">
                   Transforming your ideas into functional, high-performance websites that deliver results.
                 </p>
-                <!-- <a href="#" class="btn small">Read more</a> -->
+               
               </div>
             </div>
           </div>
@@ -157,13 +158,13 @@
                 <p class="text">
                   Building innovative mobile and web applications that drive engagement and user satisfaction.
                 </p>
-                <!-- <a href="#" class="btn small">Read more</a> -->
+               
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </section> 
     
 
     <section class="portfolio section" id="portfolio">
@@ -193,36 +194,53 @@
 
       <div class="container"data-aos="fade-down" data-aos-duration="1000">
         <div class="section-header"  >
-          <h3 class="title" data-title="My works">Portfolio</h3>
+          <h3 class="title" data-title="My Works">Portfolio</h3>
         </div>
-
+       
+      
+        <script>
+          document.addEventListener('DOMContentLoaded', function () {
+            const buttons = document.querySelectorAll('.filter-btn');
+            const items = document.querySelectorAll('.grid-item');
+      
+            buttons.forEach(button => {
+              button.addEventListener('click', function () {
+                const filterValue = this.getAttribute('data-filter');
+      
+                items.forEach(item => {
+                  if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                    item.classList.remove('hidden');
+                  } else {
+                    item.classList.add('hidden');
+                  }
+                });
+              });
+            });
+          });
+        </script>
         <div class="section-body">
           <div class="filter">
-            <button class="filter-btn active" data-filter="*">All</button>
-            <!-- <button class="filter-btn" data-filter=".ui">UI/UX</button>
-            <button class="filter-btn" data-filter=".webdev">Web Dev</button> -->
-            <!-- <button class="filter-btn" data-filter=".appdev">
-              Mobile App
-            </button>
-            <button class="filter-btn" data-filter=".logo-design">
-              Logo Design
-            </button> -->
+            <button class="filter-btn" data-filter="all">Show All</button>
+            <button class="filter-btn" data-filter="webdev">Web Development</button>
+            <button class="filter-btn" data-filter="logodesign">Logo Design</button>
           </div>
 
-          <div class="grid">
-            <!-- <div class="grid-item logo-design">
+          <div class="grid row justify-content-center">
+          
+            <div class="grid-item logodesign col-12  col-md-4"> 
               <div class="gallery-image">
                 <img src="./img/12953820_Jan-Work_7 (1).jpg" alt="" />
                 <div class="img-overlay">
                   <div class="plus"></div>
                   <div class="img-description">
-                    <h3>Logo Design</h3>
-                    <h5>View Demo</h5>
+                    <h3>Drag and Drop</h3>
+                   
+                    <a href="https://drag-and-drop-nf6e.onrender.com/"  style="text-decoration: none; color: #fff;" target="_blank"><h5>View Demo</h5></a>
                   </div>
                 </div>
               </div>
-            </div> -->
-            <div class="grid-item webdev"data-aos="fade-down" data-aos-duration="1000">
+            </div> 
+            <div class="grid-item logodesign col-12 col-md-4"data-aos="fade-down" data-aos-duration="1000">
               <div class="gallery-image">
                 <img src="./img/12953820_Jan-Work_7 (1).jpg" alt="" />
                 <div class="img-overlay">
@@ -234,8 +252,8 @@
                 </div>
               </div>
             </div>
-
-            <div class="grid-item appdev ui" data-aos="fade-down" data-aos-duration="1000">
+  
+            <div class="grid-item logodesign col-12 col-md-4" data-aos="fade-down" data-aos-duration="1000">
               <div class="gallery-image">
                 <img src="./img/13399753_Work_7.jpg" alt="" />
                 <div class="img-overlay">
@@ -247,25 +265,54 @@
                 </div>
               </div>
             </div>
-            <!-- <div class="grid-item ui webdev">
+             <div class="grid-item webdev col-12  col-md-4">
               <div class="gallery-image">
-                <img src="./img/portfolio/port9.png" alt="" />
+                <img src="./img/su.jpg" alt="" />
                 <div class="img-overlay">
                   <div class="plus"></div>
                   <div class="img-description">
                     <h3>Web Design</h3>
-                    <h5>View Demo</h5>
+                    <a href="https://result-summary-5cew.onrender.com/" style="text-decoration: none; color: #fff;" target="_blank"><h5>View Demo</h5></a>          
                   </div>
                 </div>
               </div>
-            </div> -->
+            </div>
+            <div class="grid-item  webdev col-12 col-md-4">
+              <div class="gallery-image">
+                <img src="./img/box.jpg" alt="" />
+                <div class="img-overlay">
+                  <div class="plus"></div>
+                  <div class="img-description">
+                    <h3>Movie Box</h3>
+                 
+                    <a href="https://movie-app-3v2b.onrender.com/" style="text-decoration: none; color: #fff;" target="_blank"><h5>View Demo</h5></a>          
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <div class="grid-item webdev col-12 col-md-4">
+              <div class="gallery-image">
+                <img src="./img/su.jpg" alt="" />
+                <div class="img-overlay">
+                  <div class="plus"></div>
+                  <div class="img-description">
+                    <h3>Vima-shoes</h3>
+                 
+                    <a href="https://vima-footstore.onrender.com/" style="text-decoration: none; color: #fff;" target="_blank"><h5>View Demo</h5></a>          
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          
           </div>
+         
           <div class="more-folio">
-            <!-- <a href="#" class="btn">More Folio</a> -->
+            <a href="https://github.com/ejimnkonye1" target="_blank" class="btn">More Folio</a>
           </div>
         </div>
       </div>
-    </section>
+    </section> 
 
     <section class="about section" id="about"  data-aos="fade-up" data-aos-duration="1000">
       <div class="container">
@@ -279,6 +326,7 @@
             <p class="text">
                A passionate web developer dedicated to creating amazing online experiences. With a strong background in web technologies and a keen eye for design, I bring ideas to life on the web.
             </p>
+            <h3 class="title-sm">Skills</h3>
             <div class="skills">
               <div class="skill html">
                 <h3 class="skill-title">HTML</h3>
@@ -311,7 +359,7 @@
                 </div>
               </div>
             </div>
-            <!-- <a href="#" class="btn">Read more</a> -->
+           
           </div>
 
           <div class="column-2 image"data-aos="fade-up" data-aos-duration="1000">
@@ -320,7 +368,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
 
     <section class="records"data-aos="fade-down" data-aos-duration="1000">
       <div class="overlay overlay-sm">
@@ -410,26 +458,7 @@
           </ul>
         </div>
 
-        <div class="grid-4-col footer-links">
-          <h3 class="title-sm">Services</h3>
-          <ul>
-            <li>
-              <a href="#">Web Design</a>
-            </li>
-            <li>
-              <a href="#">Web Dev</a>
-            </li>
-            <li>
-              <a href="#">App Design</a>
-            </li>
-            <li>
-              <a href="#">Marketing</a>
-            </li>
-            <li>
-              <a href="#">UI Design</a>
-            </li>
-          </ul>
-        </div>
+        
 
         <div class="grid-4-col footer-newstletter">
           <h3 class="title-sm">Email</h3>

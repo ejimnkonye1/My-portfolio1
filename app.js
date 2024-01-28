@@ -106,3 +106,22 @@ function animateSkills() {
   updateDataNumValue(numbers[1], 8);  // Update the second element to '8'
   updateDataNumValue(numbers[2], 20); // Update the third element to '20'
   updateDataNumValue(numbers[3], 4);  // Update the fourth element to '4'
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const buttons = document.querySelectorAll('.filter-btn');
+    const items = document.querySelectorAll('.grid-item');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', function () {
+        const filterValue = this.getAttribute('data-filter');
+
+        items.forEach(item => {
+          if (filterValue === 'all' || item.classList.contains(filterValue)) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
