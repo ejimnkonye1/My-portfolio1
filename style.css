@@ -680,7 +680,14 @@ header .circle {
   width: 100%;
   cursor: pointer;
 }
-
+.vima{
+  width: 90% !important;
+  height: 200px !important;
+}
+.btn-warning{
+  background-color: var(--main-color) !important;
+  color: var(--light-one) !important
+}
 .gallery-image img {
   position: absolute;
   height: 115%;
@@ -1463,14 +1470,20 @@ header .circle {
 /* End Footer */
 
 /* Responsive */
+@media only screen and (max-width: 390px) {
+  
+}
 @media (max-width: 678px) {
 .column-2 {
   display: none !important;
   margin-bottom: 50px !important;
 }
-.column-1{
+.column-11{
   margin-bottom: 60% !important;
   
+}
+.vima{
+  width: 100% !important;
 }
 .header-content{
   height: 400px !important;
