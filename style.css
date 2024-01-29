@@ -226,7 +226,10 @@ img {
   padding: 0.7rem 1.8rem;
   font-size: 1rem;
 }
-
+.btn-main-color {
+  background-color: var(--main-color) !important;
+  color: #fff !important;
+}
 /* End Genral Styles */
 
 /* Header */
@@ -1463,10 +1466,24 @@ header .circle {
 @media (max-width: 678px) {
 .column-2 {
   display: none !important;
+  margin-bottom: 50px !important;
 }
+.column-1{
+  margin-bottom: 60% !important;
+  
+}
+.header-content{
+  height: 400px !important;
+}
+
 .header-title{
-  line-height: 40px;
+  /* line-height: 40px; */
+  white-space: nowrap;
+
+  font-weight: 300;
 }
+
+
 .yes{
   margin-left: 0 !important;
   padding-left: 80%;
