@@ -1,7 +1,7 @@
 
   document.addEventListener("DOMContentLoaded", function () {
     // Toggle the navigation menu on mobile devices
-    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const hamburgerMenu = document.querySelector(".menu-toggler");
     const links = document.querySelector(".links");
     hamburgerMenu.addEventListener("click", () => {
       links.classList.toggle("active");
@@ -69,31 +69,23 @@ function animateSkills() {
   // Call the animateSkills function when the page is loaded
   window.addEventListener('load', animateSkills);
   document.addEventListener("DOMContentLoaded", function () {
-    const hamburgerMenu = document.querySelector(".hamburger-menu");
+    const hamburgerMenu = document.querySelector(".menu-toggler");
     const links = document.querySelector(".links ul");
-
-    hamburgerMenu.addEventListener("click", function () {
-      links.classList.toggle("active");
-    });
-  });
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburgerMenu = document.querySelector(".hamburger-menu");
-    const links = document.querySelector(".links ul");
-
-    hamburgerMenu.addEventListener("click", function () {
-      links.classList.toggle("active");
-    });
-  });
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuButton = document.querySelector(".menu-toggler");
     const nav = document.querySelector("nav");
   
-    menuButton.addEventListener("click", function () {
+    hamburgerMenu.addEventListener("click", function () {
+      hamburgerMenu.classList.toggle("change");
+      links.classList.toggle("active");
       nav.classList.toggle("open");
     });
   });
+  
+  
+  
   const numbers = document.querySelectorAll('.number'); // Select all elements with class 'number'
 
+
+  
   // Function to update data-num attribute based on the desired value
   function updateDataNumValue(element, newValue) {
     element.setAttribute('data-num', newValue);
@@ -125,3 +117,20 @@ function animateSkills() {
       });
     });
   });
+  // Select all link elements inside the .links class
+const links = document.querySelectorAll('.links a');
+
+// Select the nav element
+const navElement = document.querySelector('nav');
+
+// Add a click event listener to each link
+links.forEach(link => {
+  link.addEventListener('click', () => {
+    // Remove the 'open' class from the nav element
+    navElement.classList.remove('open');
+  });
+});
+function myFunction(x) {
+  x.classList.toggle("change");
+}
+

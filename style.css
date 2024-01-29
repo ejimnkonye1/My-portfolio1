@@ -290,7 +290,8 @@ nav .container {
   color: var(--light-one);
   background-color: #f57500;
 }
-/* Styles for the hamburger menu button */
+
+
 .menu-toggler {
   background: none;
   border: none;
@@ -307,46 +308,40 @@ nav .container {
   outline: none;
 }
 
-/* Styles for the hamburger menu bars */
+.menu-toggler.active .navbar-toggler-icon:nth-child(1) {
+  transform: translate(0, 11px) rotate(-45deg);
+  background-color: var(--dark-one);
+  margin: 0;
+}
+
+.menu-toggler.active .navbar-toggler-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggler.active .navbar-toggler-icon:nth-child(3) {
+  transform: translate(0, -11px) rotate(45deg);
+  background-color: var(--dark-one);
+  margin: 0;
+}
+
 .navbar-toggler-icon {
-  width: 2.1rem;
-  height: 3px;
+  width: 4.1rem;
+  height: 5px;
   border-radius: 3px;
   background-color: var(--dark-one);
   transition: 0.5s;
   margin: 2px 0;
 }
 
-
-/* .menu-toggler .bar {
-  width: 2.1rem;
-  height: 3px;
-  border-radius: 3px;
-  background-color: var(--dark-one);
-  transition: 0.5s;
- 
+.menu-toggler.active .navbar-toggler-icon {
+  background-color: transparent;
   margin: 2px 0;
-} */
+}
 
-/* Default styles for the hamburger menu bar */
 .menu-toggler .navbar-toggler-icon {
   display: none;
 }
-.menubar{
-    
-  display: none;
-  position: relative;
-  top: 30%;
-  margin-bottom: 5px;
-  transform: translateX(-50%);
-}
-.bar{
-  width: 20px;
-  height: 3px;
-  /* background-color: rgb(137, 130, 130); */
-  background-color: #fff;
-  margin-bottom: 3px;
-}
+
 /* Media query for screens smaller than 768px where the bar is shown */
 @media (max-width: 768px) {
   .menu-toggler .navbar-toggler-icon {
@@ -354,62 +349,17 @@ nav .container {
   }
 }
 
-.hamburger-menu {
-  width: 1.7rem;
-  height: 1rem;
-  z-index: 100;
-  position: relative;
-  display: none;
-  align-items: center;
-  justify-content: flex-end;
-}
 
-.hamburger-menu .bar {
-  position: relative;
-  width: 1.1rem;
-  height: 3px;
-  border-radius: 3px;
-  background-color: var(--dark-one);
-  transition: 0.5s;
-}
 
-.bar:before,
-.bar:after {
-  content: "";
-  position: absolute;
-  width: 2.1rem;
-  height: 3px;
-  border-radius: 3px;
-  background-color: var(--dark-one);
-  transition: 0.5s;
-}
 
-.bar:before {
-  transform: translateY(-9px);
-}
 
-.bar:after {
-  transform: translateY(9px);
-}
 
-nav.open .hamburger-menu .bar {
-  background-color: transparent;
-  transform: rotate(360deg);
-}
 
-nav.open .hamburger-menu .bar:before {
-  transform: translateY(0) rotate(45deg);
-  background-color: var(--light-one);
-}
-
-nav.open .hamburger-menu .bar:after {
-  transform: translateY(0) rotate(-45deg);
-  background-color: var(--light-one);
-}
 
 nav.open .links {
   transform: translateX(0);
 }
+
 .header-content{
   width: 100% !important;
   overflow: none;
@@ -499,7 +449,22 @@ header .circle {
   left: 15px;
   opacity: 0.06;
 }
+.circle-container {
+  text-align: center;
+}
+.circle-container img{
+  height: 60px;
+}
 
+.logos {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  z-index: 2;
+  color: red;
+}
 /* End header */
 
 /* Services */
@@ -1525,6 +1490,7 @@ header .circle {
 }
 .circle-container {
   text-align: center;
+  padding: 10px;
 }
 .circle-container img{
   height: 60px;
@@ -1543,24 +1509,30 @@ header .circle {
   text-align: center !important;
   padding-left: 90%;
 }
+.records .container {
+  grid-template-columns: repeat(2, 1fr) !important ;
+  gap: 30px;
+  width: 90%;
+  
+}
+.record-circle{
+ 
+  width: 100% !important;
+  
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+
+.social-media a {
+  margin: 5 10px; /* Adjust the spacing between social media icons */
+}
+
 
 }
-.circle-container {
-  text-align: center;
-}
-.circle-container img{
-  height: 60px;
-}
 
-.logos {
-  border-radius: 50%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  z-index: 2;
-  color: red;
-}
 @media (max-width: 1280px) {
   .text {
     font-size: 1rem;
@@ -1992,9 +1964,7 @@ header .circle {
     margin-top: 1rem;
   }
 
-  .hamburger-menu {
-    display: flex;
-  }
+  
 
   .header-content {
     margin-top: 1rem;
@@ -2145,7 +2115,7 @@ header .circle {
   }
 
   .records .container {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) ;
   }
 
   .records .wave2 {
